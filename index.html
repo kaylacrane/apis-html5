@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      //averiguar si navegador puede usar APIs necesarios
+      if (!window.File || !window.FileReader) {
+        alert("File and7or FileReader APIs not supported in this browser")
+      }
+    </script>
+    <link rel="stylesheet" href="./main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="title">Video Player</h1>
+    <p>Load and view a video of your choice</p>
+    <form id="form-load-video">
+      <input type="file" id="file-upload-input" style="visibility:hidden" accept="video/*"/>
+      <label id="file-upload-label" class="button" for="file-upload-input" tabindex="0">Select a video to view</label>
+    </form>
+    <div id="video-display"></div>
+    </div>
+    <div class="video-control-buttons hidden-element">
+      <button id="playpause" data-state="paused" class="green button" type="button"></button>
+      <button id="volume-up" data-volume="volume" type="button" class="button">VOLUME +</button>
+      <button id="volume-down" data-volume="volume" type="button" class="button">VOLUME -</button>
+      <button id="mute" data-volume="mute" type="button" class="button">MUTE</button>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

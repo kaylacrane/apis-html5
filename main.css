@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.title {
+  font-size: 28px;
+}
+/*escondemos file input para poder usar y decorar label como botón*/
+#file-upload-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.video-title {
+  font-size: 18px;
+  font-style: italic;
+}
+#video-display {
+  margin: 15px 0;
+  min-width: 600px;
+  max-width: 650px;
+  display: flex;
+  justify-content: center;
+  min-height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+/*mensajes de error*/
+#video-display .messages {
+  display: inline-block;
+  margin: auto;
+  color: #ff0000;
+  font-size: 20px;
+}
+/*botones*/
+.video-control-buttons {
+  display: flex;
+  justify-content: center;
+  width: 650px;
+}
+.button {
+  margin: 10px 2px;
+  background-color: #81b0c2;
+  border: 2px solid #999;
+  border-radius: 3px;
+  color: #ffffff;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.button:hover {
+  background-color: #ffffff;
+  color: #808080;
+}
+.button:focus {
+  outline: 2px solid #000;
+}
+/*para no ver cambio de tamaño de botón entre stop y play*/
+#playpause {
+  width: 75px;
+}
+/*play button*/
+.green {
+  background-color: #008000;
+}
+.green::before {
+  content: "PLAY";
+}
+/*stop button*/
+.red {
+  background-color: #ff0000;
+}
+.red::before {
+  content: "STOP";
+}
+/*botón de mute*/
+.orange {
+  background-color: #ffa500;
+}
+.hidden-element {
+  display: none;
+}
